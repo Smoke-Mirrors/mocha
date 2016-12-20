@@ -340,10 +340,11 @@ program.compilers.forEach(function (c) {
 });
 
 // requires
-
+global.mocha = mocha;
 requires.forEach(function (mod) {
   require(mod);
 });
+delete global.mocha;
 
 // interface
 
